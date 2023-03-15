@@ -18,6 +18,9 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" name="name" class="form-control" />
+                      @error('name')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="form3Example1c">Name</label>
                     </div>
                   </div>
@@ -26,6 +29,9 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" name="email" class="form-control" />
+                      @error('email')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="form3Example3c">Email</label>
                     </div>
                   </div>
@@ -34,6 +40,9 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" name="password" class="form-control" />
+                      @error('password')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="form3Example4c">Password</label>
                     </div>
                   </div>
@@ -42,6 +51,9 @@
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" name="password_confirmation" class="form-control" />
+                      @error('password_confirmation')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="form3Example4cd">Confirm password</label>
                     </div>
                   </div>

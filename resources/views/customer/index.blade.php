@@ -1,5 +1,8 @@
 <x-nav />
 @include('partials.header')
+@if(Session::has('success'))
+      {{Session::get('success')}}
+      @endif
 
 <table class="table table-hover">
   <thead>
@@ -7,7 +10,7 @@
       <th scope="col">ID</th>
       <th scope="col">Last Name</th>
       <th scope="col">First Name</th>
-      <th scope="col">EMail</th>
+      <th scope="col">Email</th>
       <th scope="col">Address</th>
       <th></th>
       <th>
@@ -24,7 +27,7 @@
       <td>{{$customer->email}}</td>
       <td>{{$customer->address}}</td>
       <td><a href="#">Edit</a></td>
-      <td><a href="#">Delete</a></td>
+      <td><a href="delete/{{$customer->id}}">Delete</a></td>
     </tr>
   </tbody>
   @endforeach
