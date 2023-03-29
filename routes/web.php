@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+/*
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +26,13 @@ Route::get('delete/{id}',[CustomerController::class, 'delete']);
 Route::get('/addCustomer',[CustomerController::class, 'addCustomer']);
 Route::post('/saveCustomer',[CustomerController::class, 'saveCustomer']);
 Route::get('edit/{id}',[CustomerController::class, 'edit']);
-Route::post('updateCustomer',[CustomerController::class, 'updateCustomer']);
+Route::post('/updateCustomer',[CustomerController::class, 'updateCustomer']);
+
+//Product
+Route::get('/product',[ProductController::class, 'indexp']);
+Route::get('delete/{id}',[ProductController::class, 'deletep']);
+Route::get('/addProduct',[ProductController::class, 'addProduct']);
+Route::post('/saveProduct',[ProductController::class, 'saveProduct']);
+Route::get('edit/{id}',[ProductController::class, 'editp']);
+Route::post('/updateProduct',[ProductController::class, 'updateProduct']);
 
